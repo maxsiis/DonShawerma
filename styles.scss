@@ -253,6 +253,7 @@ $yellow-color: #f27059;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding: 30px 0;
     &__menu {
       &__list {
         display: flex;
@@ -288,6 +289,124 @@ $yellow-color: #f27059;
 .huaweiapp {
   width: 35px;
   height: 35px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .nav {
+    max-width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    &-logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 15px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
+      &__title {
+        font-size: 20px;
+        font-family: "Seymour One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: $primary-color;
+      }
+    }
+  }
+  .main {
+    max-width: 100%;
+    &-img {
+      height: 70%;
+      width: 85%;
+      margin: 0 auto;
+      margin-top: 30px;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+      }
+    }
+    &-btn {
+      margin: 0 auto;
+      text-align: center;
+      &__menu {
+        background-color: $yellow-color;
+        width: 130px;
+        height: 40px;
+        color: #f8f7ff;
+        font-size: 18px;
+        font-weight: 600;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  .menu-list__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 35px;
+    &__img {
+      position: relative;
+      width: 350px;
+      height: 580px;
+      background-color: $primary-color;
+      margin-bottom: 35px;
+
+      img {
+        width: 350px;
+        height: 220px;
+        background-color: white;
+        border-radius: 15px;
+      }
+      h3 {
+        text-align: center;
+        font-size: 26px;
+        font-family: "Unbounded", sans-serif;
+      }
+      &__description {
+        text-align: center;
+        font-family: "Unbounded", sans-serif;
+        font-size: 14px;
+        margin: 10px;
+      }
+      &__price {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        width: inherit;
+        top: 87%;
+        span {
+          font-family: "Unbounded", sans-serif;
+          font-size: 20px;
+          color: #9a031e;
+        }
+        button {
+          width: 120px;
+          border: none;
+          background-color: $yellow-color;
+          border-radius: 10px;
+          height: 50px;
+          color: #f8f7ff;
+          font-size: 18px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #f7806b;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
